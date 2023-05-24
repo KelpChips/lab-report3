@@ -1,7 +1,8 @@
 # Lab Report 3 | Researching Commands (Grep)
+### Renato Pimentel
 Source: All commands that appear were found by reading the manual in git for grep/ using the command `man grep`.
 
-**grep -l**
+`grep -l`
 ```
 $ grep -l "base pairs" ./technical/plos/*.txt
 ./technical/plos/journal.pbio.0020190.txt
@@ -15,7 +16,7 @@ $ grep -l "banks" ./technical/biomed/*.txt
 ```
 When using grep with `-l` added, it will print the path to the files with the inputted string, instead of printing the mathcing lines. I could see this being useful if you needed to organize files with specific contents in a folder.
 
-**grep -c**
+`grep -c`
 ```
 $ grep -c "chemicals" ./technical/biomed/*.txt
 ...
@@ -40,13 +41,27 @@ $ grep -c "evolution" ./technical/biomed/*.txt
 
 When using `-c` with grep, it will print the paths to all the files in the directory. But additionally show a number on the end of the path with how many times the inputted word appears in the file. I can see this being useful if you are in a company and are logging entries. You can use this command to search how many times an error or certain event has occured.
 
-**grep -i**
+`grep -i`
 ```
+$ grep -i "DIPRIME" ./technical/biomed/*.txt        
+./technical/biomed/1471-2164-3-16.txt:          labeled using Rediprime II Random Prime Labeling System
 
+$ grep -i "DiPREnoRPhINE" ./technical/biomed/*.txt  
+./technical/biomed/1471-2210-2-5.txt:          3H-diprenorphine ( 3H-DIPR; 3H-DIPR, 54 Ci/mmol, 
 ```
+When you use `i` with grep, it will do a case-insensitive search of the inputted pattern on the directory inputted. I can see this being useful if you are searching for a specific patter but are uncertain of the case senstivity of the file(s). Using this specific command will allow you to match the pattern no matter if the letters are uppercase, lowercase, or mixed even.
 
-**grep -e**
+`grep -e`
 ```
+$ grep -e "mountain" -e "sunrays" -i ./technical/biomed/*.txt
+...
+./technical/biomed/1471-2458-2-6.txt:          high-risk leisure pursuits, such as mountain climbing,
+./technical/biomed/1472-6785-2-7.txt:        characteristics in the Intermountain West. Although a
+./technical/biomed/1472-6785-2-7.txt:        geographically restricted area (Fig. 1), the Intermountain
+./technical/biomed/1472-6785-2-7.txt:        the abundance and diversity of fungi in the Intermountain
+./technical/biomed/1472-6785-2-7.txt:          The Intermountain West is topographically and     
+./technical/biomed/1472-6785-2-7.txt:          The Intermountain West consists of two biogeographic
+...
 
 $ grep -e "suns" -e "bombastical" -i ./technical/biomed/*.txt
 ./technical/biomed/1471-5945-1-3.txt:          tanning history, use of suntan lotions and sunscreens,
