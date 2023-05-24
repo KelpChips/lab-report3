@@ -44,10 +44,12 @@ When using `-c` with grep, it will print the paths to all the files in the direc
 `grep -i`
 ```
 $ grep -i "DIPRIME" ./technical/biomed/*.txt        
-./technical/biomed/1471-2164-3-16.txt:          labeled using Rediprime II Random Prime Labeling System
+./technical/biomed/1471-2164-3-16.txt:          labeled using Rediprime II Random 
+Prime Labeling System
 
 $ grep -i "DiPREnoRPhINE" ./technical/biomed/*.txt  
-./technical/biomed/1471-2210-2-5.txt:          3H-diprenorphine ( 3H-DIPR; 3H-DIPR, 54 Ci/mmol, 
+./technical/biomed/1471-2210-2-5.txt:          3H-diprenorphine ( 3H-DIPR; 3H-DIPR, 
+54 Ci/mmol, 
 ```
 When you use `i` with grep, it will do a case-insensitive search of the inputted pattern on the directory inputted. I can see this being useful if you are searching for a specific patter but are uncertain of the case senstivity of the file(s). Using this specific command will allow you to match the pattern no matter if the letters are uppercase, lowercase, or mixed even.
 
@@ -56,9 +58,12 @@ When you use `i` with grep, it will do a case-insensitive search of the inputted
 $ grep -e "mountain" -e "sunrays" -i ./technical/biomed/*.txt
 ...
 ./technical/biomed/1471-2458-2-6.txt:          high-risk leisure pursuits, such as mountain climbing,
-./technical/biomed/1472-6785-2-7.txt:        characteristics in the Intermountain West. Although a
-./technical/biomed/1472-6785-2-7.txt:        geographically restricted area (Fig. 1), the Intermountain
-./technical/biomed/1472-6785-2-7.txt:        the abundance and diversity of fungi in the Intermountain
+./technical/biomed/1472-6785-2-7.txt:        characteristics in the Intermountain West. 
+Although a
+./technical/biomed/1472-6785-2-7.txt:        geographically restricted area (Fig. 1), the 
+Intermountain
+./technical/biomed/1472-6785-2-7.txt:        the abundance and diversity of fungi in the
+Intermountain
 ./technical/biomed/1472-6785-2-7.txt:          The Intermountain West is topographically and     
 ./technical/biomed/1472-6785-2-7.txt:          The Intermountain West consists of two biogeographic
 ...
